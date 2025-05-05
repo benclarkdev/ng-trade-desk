@@ -1,4 +1,4 @@
-import { Market, Sector } from '../../models/stock.interface';
+import { Market, Sector } from '@data-access';
 
 export interface IStockSeed {
   name: string,

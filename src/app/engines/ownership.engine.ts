@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { IPrimaryOwner } from '../models/stock.interface';
+import { IPrimaryOwner } from '../../../libs/data-access/src/lib/models/stock.interface';
 import { FIRM_SEEDS } from './data/firm-seeds';
 
 @Injectable({

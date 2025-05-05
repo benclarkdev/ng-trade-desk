@@ -2,8 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { ActionButtonsComponent } from '@features/stock-actions';
 
-import { IPortfolio } from '../../models/portfolio.interface';
-import { PortfolioService } from '../../services/portfolio.service';
+import { IPortfolio, PortfolioService } from '@data-access';
 
 @Component({
   selector: 'portfolio',

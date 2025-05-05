@@ -4,8 +4,7 @@ import { filter, Observable, switchMap, tap } from 'rxjs';
 
 import { ActionButtonsComponent } from '@features/stock-actions';
 
-import { IStock } from '../../models/stock.interface';
-import { StockStore } from '../../stores/stock.store';
+import { IStock, StockStore } from '@data-access';
 
 import { ChartComponent } from '../chart/chart.component';
 
