@@ -1,0 +1,29 @@
+<!-- Markets -->
+<dashboard-table
+  nameColumnHeaderText="Market"
+  tableLabel="Markets"
+  [rows]="(marketTableRows$ | async) ?? []"
+  [isLoading]="(isMarketsTableLoading$ | async) ?? false">
+</dashboard-table>
+
+<!-- Stocks -->
+<dashboard-stocks-table 
+  [rows]="(stocksTableRows$ | async) ?? []"
+  [isLoading]="(isStocksTableLoading$ | async) ?? false">
+</dashboard-stocks-table>
+
+<!-- Sectors-->
+<dashboard-table
+  nameColumnHeaderText="Sector"
+  tableLabel="Top Sectors"
+  [rows]="(sectorsTableRows$ | async) ?? []"
+  [isLoading]="(isSectorsTableLoading$ | async) ?? false">
+</dashboard-table>
+
+<!-- Firms-->
+<dashboard-table
+  nameColumnHeaderText="Firm"
+  tableLabel="Top Firms"
+  [rows]="(firmsTableRows$ | async) ?? []"
+  [isLoading]="(isFirmsTableLoading$ | async) ?? false">
+</dashboard-table>

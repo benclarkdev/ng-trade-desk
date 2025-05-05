@@ -1,0 +1,24 @@
+<h2>{{ tableLabel }}</h2>
+
+<div class="loading" *ngIf="isLoading">
+  <p>Loading...</p>
+</div>
+
+<table *ngIf="!isLoading && rows.length > 0">
+  <thead>
+    <tr>
+      <th>{{ nameColumnHeaderText }}</th>
+      <th>Change</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let tableRow of rows">
+      <th scope="row">{{tableRow.name}}</th>
+      <td>{{ tableRow.change | percent: '2.2'}}</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="no-rows" *ngIf="!isLoading && rows.length === 0">
+  <p>Error: No data</p>
+</div>

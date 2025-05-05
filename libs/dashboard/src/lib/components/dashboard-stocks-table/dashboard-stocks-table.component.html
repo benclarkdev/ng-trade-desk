@@ -1,0 +1,30 @@
+<h2>Top Stocks</h2>
+
+<div class="loading" *ngIf="isLoading">
+  <p>Loading...</p>
+</div>
+
+<table *ngIf="!isLoading && rows.length > 0">
+  <thead>
+    <tr>
+      <th>Symbol</th>
+      <th>Company</th>
+      <th>Change</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let tableRow of rows">
+      <th scope="row">
+        <a [routerLink]="['/stock', tableRow.symbol]">{{ tableRow.symbol }}</a>
+      </th>
+      <td>{{ tableRow.name }} </td>
+      <td>{{ tableRow.change | percent: '2.2'}}</td>
+      <td><action-buttons></action-buttons></td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="no-rows" *ngIf="!isLoading && rows.length === 0">
+  <p>Error: No data</p>
+</div>

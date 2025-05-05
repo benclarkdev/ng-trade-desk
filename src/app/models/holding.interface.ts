@@ -1,5 +1,5 @@
 export interface IHolding {
-  purchasePrice: number;
+  price: number;
   shares: number;
   symbol: string;
 }
