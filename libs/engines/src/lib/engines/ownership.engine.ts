@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { IPrimaryOwner } from '../../../libs/data-access/src/lib/models/stock.interface';
-import { FIRM_SEEDS } from './data/firm-seeds';
+import { IPrimaryOwner } from '@data-access';
+import { FIRM_SEEDS } from '../seeds/firm-seeds';
 
 @Injectable({
   providedIn: 'root'

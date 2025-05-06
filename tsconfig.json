@@ -27,6 +27,9 @@
       "@data-access": [
         "libs/data-access/src/index.ts"
       ],
+      "@engines": [
+        "libs/engines/src/index.ts"
+      ],
     },
     "module": "ES2022",
     "lib": [

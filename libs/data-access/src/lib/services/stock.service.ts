@@ -2,8 +2,9 @@ import { Injectable } from '@angular/core';
 
 import { combineLatest, Observable, of, switchMap } from 'rxjs';
 
+import { IStockSeed, STOCK_SEEDS } from '@engines';
+
 import { IStock } from '../models/stock.interface';
-import { IStockSeed, STOCK_SEEDS } from '../../../../../src/app/engines/data/stock-seeds';
 import { PriceService } from './price.service';
 
 @Injectable({
