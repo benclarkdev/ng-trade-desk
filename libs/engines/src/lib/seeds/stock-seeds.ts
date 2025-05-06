@@ -1,4 +1,4 @@
-import { Market, Sector } from '@data-access';
+import { Market, Sector } from '@ng-trade-desk/data-access';
 
 export interface IStockSeed {
   name: string,

@@ -14,8 +14,6 @@ export class PricingEngine {
   ){}
   
   getStockValue(): number {
-    // TODO: How does a stock change?
-    // sum of factors: market + sector + ownership
-    // max change percentage
+    return 3;
   }
 }

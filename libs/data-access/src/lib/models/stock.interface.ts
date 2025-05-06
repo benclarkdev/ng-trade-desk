@@ -1,3 +1,7 @@
+export interface IListing {
+  
+}
+
 export interface IStock {
   name: string;
   last: number;
@@ -30,4 +34,4 @@ export enum Sector {
 export interface IPrimaryOwner {
   name: string;
   performance: number;
-} 
+}

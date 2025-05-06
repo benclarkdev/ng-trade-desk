@@ -18,16 +18,16 @@
     "target": "ES2022",
     "baseUrl": "",
     "paths": {
-      "@features/dashboard/*": [
+      "@ng-trade-desk/features/dashboard*": [
         "libs/dashboard/src/lib/*"
       ],
-      "@features/stock-actions": [
+      "@ng-trade-desk/features/stock-actions": [
         "libs/stock-actions/src/index.ts"
       ],
-      "@data-access": [
+      "@ng-trade-desk/data-access": [
         "libs/data-access/src/index.ts"
       ],
-      "@engines": [
+      "@ng-trade-desk/engines": [
         "libs/engines/src/index.ts"
       ],
     },

@@ -2,9 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 import { filter, Observable, switchMap, tap } from 'rxjs';
 
-import { ActionButtonsComponent } from '@features/stock-actions';
+import { ActionButtonsComponent } from '@ng-trade-desk/features/stock-actions';
 
-import { IStock, StockStore } from '@data-access';
+import { IStock, StockStore } from '@ng-trade-desk/data-access';
 
 import { ChartComponent } from '../chart/chart.component';
 

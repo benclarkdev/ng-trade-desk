@@ -3,7 +3,7 @@ import { Routes } from '@angular/router';
 export const routes: Routes = [
   {
     path: '',
-    loadComponent: () => import('@features/dashboard/components/dashboard/dashboard.component').then(m => m.DashboardComponent),
+    loadComponent: () => import('@ng-trade-desk/features/dashboardcomponents/dashboard/dashboard.component').then(m => m.DashboardComponent),
   },
   {
     path: 'portfolio',

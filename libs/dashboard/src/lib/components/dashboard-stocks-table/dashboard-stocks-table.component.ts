@@ -2,7 +2,7 @@ import { CommonModule, PercentPipe } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
-import { ActionButtonsComponent } from '@features/stock-actions';
+import { ActionButtonsComponent } from '@ng-trade-desk/features/stock-actions';
 
 import { IDashboardStockTableRow } from '../../interfaces/dashboard-stock-table-row.interface';
 

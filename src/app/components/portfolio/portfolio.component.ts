@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
-import { ActionButtonsComponent } from '@features/stock-actions';
+import { ActionButtonsComponent } from '@ng-trade-desk/features/stock-actions';
 
-import { IPortfolio, PortfolioService } from '@data-access';
+import { IPortfolio, PortfolioService } from '@ng-trade-desk/data-access';
 
 @Component({
   selector: 'portfolio',
