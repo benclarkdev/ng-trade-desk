@@ -1,11 +1,12 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { BehaviorSubject, Observable } from 'rxjs';
+import { BehaviorSubject, Observable, tap } from 'rxjs';
+
+import { MarketService } from '@ng-trade-desk/data-access';
 
 import { IDashboardTableRow } from '../../interfaces/dashboard-table-row.interface';
 import { DashboardTableComponent } from '../dashboard-table/dashboard-table.component';
-
 import { IDashboardStockTableRow } from '../../interfaces/dashboard-stock-table-row.interface';
 import { DashboardStocksTableComponent } from '../dashboard-stocks-table/dashboard-stocks-table.component';
 
@@ -15,12 +16,12 @@ import { DashboardStocksTableComponent } from '../dashboard-stocks-table/dashboa
   imports: [
     CommonModule,
     DashboardStocksTableComponent,
-    DashboardTableComponent,
+    DashboardTableComponent
   ],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.scss'
 })
-export class DashboardComponent {
+export class DashboardComponent implements OnInit {
   @Input() nameColumnHeaderText: string = 'Name';
 
   isMarketsTableLoadingSubj: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(true);
@@ -38,4 +39,17 @@ export class DashboardComponent {
   isStocksTableLoadingSubj: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(true);
   isStocksTableLoading$: Observable<boolean> = this.isFirmsTableLoadingSubj.asObservable();
   stocksTableRows$!: Observable<IDashboardStockTableRow[]>;
+
+  constructor(
+    private marketService: MarketService
+  ){}
+
+  ngOnInit(): void {
+    this.marketService.checkInit()
+      .pipe(
+        tap((isInit: boolean) => {
+          console.log('did it work', isInit);
+        })
+      ).subscribe();
+  }
 }
