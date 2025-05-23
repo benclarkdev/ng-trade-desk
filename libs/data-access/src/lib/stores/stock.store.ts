@@ -1,7 +1,9 @@
 import { Injectable } from '@angular/core';
-import { StockService } from '../services/stock.service';
+
 import { Observable, of, tap } from 'rxjs';
-import { IStock } from '../models/stock.interface';
+
+import { IStock } from '@ng-trade-desk/models';
+import { StockService } from '../services/stock.service';
 
 @Injectable({
   providedIn: 'root'

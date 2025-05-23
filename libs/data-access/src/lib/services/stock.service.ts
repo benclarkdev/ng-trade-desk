@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
 
-import { combineLatest, Observable, of, switchMap } from 'rxjs';
+import { Observable, of, switchMap } from 'rxjs';
 
 import { IStockSeed, STOCK_SEEDS } from '@ng-trade-desk/engines';
+import { IStock } from '@ng-trade-desk/models';
 
-import { IStock } from '../models/stock.interface';
 import { PriceService } from './price.service';
 
 @Injectable({

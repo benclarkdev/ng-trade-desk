@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 
 import { Observable, of } from 'rxjs';
 
-import { IStock } from '../models/stock.interface';
+import { IStock } from '@ng-trade-desk/models';
 
 @Injectable({
   providedIn: 'root'

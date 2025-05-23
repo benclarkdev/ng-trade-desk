@@ -4,7 +4,8 @@ import { filter, Observable, switchMap, tap } from 'rxjs';
 
 import { ActionButtonsComponent } from '@ng-trade-desk/features/stock-actions';
 
-import { IStock, StockStore } from '@ng-trade-desk/data-access';
+import { StockStore } from '@ng-trade-desk/data-access';
+import { IStock } from '@ng-trade-desk/models';
 
 import { ChartComponent } from '../chart/chart.component';
 

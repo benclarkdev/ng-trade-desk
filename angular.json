@@ -140,21 +140,6 @@
       "sourceRoot": "libs/data-access/src",
       "prefix": "lib",
       "architect": {
-        "build": {
-          "builder": "@angular-devkit/build-angular:ng-packagr",
-          "options": {
-            "project": "libs/data-access/ng-package.json"
-          },
-          "configurations": {
-            "production": {
-              "tsConfig": "libs/data-access/tsconfig.lib.prod.json"
-            },
-            "development": {
-              "tsConfig": "libs/data-access/tsconfig.lib.json"
-            }
-          },
-          "defaultConfiguration": "production"
-        },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
@@ -177,6 +162,24 @@
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
             "tsConfig": "libs/engines/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
+          }
+        }
+      }
+    },
+    "models": {
+      "projectType": "library",
+      "root": "libs/models",
+      "sourceRoot": "libs/models/src",
+      "prefix": "lib",
+      "architect": {
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "libs/models/tsconfig.spec.json",
             "polyfills": [
               "zone.js",
               "zone.js/testing"

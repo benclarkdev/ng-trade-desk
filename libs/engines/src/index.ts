@@ -4,8 +4,7 @@
 
 // engines
 export * from './lib/engines/market.engine';
-export * from './lib/engines/ownership.engine';
-export * from './lib/engines/pricing.engine';
+export * from './lib/engines/variable-performance.engine';
 
 // seeds
 export * from './lib/seeds/firm-seeds';

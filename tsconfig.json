@@ -30,6 +30,9 @@
       "@ng-trade-desk/engines": [
         "libs/engines/src/index.ts"
       ],
+      "@ng-trade-desk/models": [
+        "libs/models/src/index.ts"
+      ],
     },
     "module": "ES2022",
     "lib": [
